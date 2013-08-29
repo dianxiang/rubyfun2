@@ -1,0 +1,41 @@
+1.) made new rails project
+	rails new sample_app --skip-test-unit
+
+2.) updated gemfile to include the gems we need
+
+3.) update and install the gems we need
+	bundle update
+	bundle install --without production
+
+4.) install RSpec in place of Test::Unit
+	rails generate rspec:install
+
+
+Making truly static pages
+	- adding html pages to public folder
+	- making static pages with rails
+
+Note:
+	generate / destroy controllers : 
+	rails generate controller ControllerName action1 action2 ..
+	rails destroy controller ControllerName action1 action2 ..
+
+	generate / destroy models :
+	rails generate model ModelName foo:string bar:integer
+	rails destroy model ModelName
+
+	changing state of database:
+	rake db:migrate
+	rake db:rollback (undo a single migration)
+	rake db:migrate VERSION=0 (go way back to the beginning)
+
+	routes.rb - routes the pages to certain actions in the controller
+
+
+GET = reading data on a web : "get a page"
+POST = request sent when submitting a form. typically used for creating things / updates
+PUT = updating things on remote server 
+DELETE = destroying things on remote server
+
+With RAILS:
+	Rails looks in the StaticPage controller (initially empty) and then executes the code in the home action. Then it renders the view corresponding to the action
