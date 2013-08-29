@@ -3,6 +3,7 @@ SampleApp::Application.routes.draw do
   #get = GET request (we get a page at the address /static_pages/home)
   get "static_pages/home"  
   get "static_pages/help"
+  get "static_pages/about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
