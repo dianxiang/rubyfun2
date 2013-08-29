@@ -1,0 +1,1 @@
+Another sample application with static pages this time :D
