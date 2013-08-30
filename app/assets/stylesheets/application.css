@@ -8,6 +8,8 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *  1. all stylesheet directories are included including the tree subdirectories
+ *  2. the application.css itself gets included
  *= require_self
  *= require_tree .
  */

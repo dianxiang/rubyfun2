@@ -1,9 +1,25 @@
 SampleApp::Application.routes.draw do
+  get "users/new"
+
   #maps request for the URI /static_pages/home to home action in StaticPages controller
   #get = GET request (we get a page at the address /static_pages/home)
-  get "static_pages/home"  
-  get "static_pages/help"
-  get "static_pages/about"
+  
+  # You can have the root of your site routed with "root"
+  # just remember to delete public/index.html.
+  # root :to => 'welcome#index'
+
+  root to: 'static_pages#home'                  #root_path => '/'     about_url => 'http://localhost:3000/'
+
+
+  match '/signup',  to: 'users#new'
+  match '/help',    to: 'static_pages#help'        #help_path => '/help'     about_url => 'http://localhost:3000/help'
+  match '/about',   to: 'static_pages#about'      #about_path => '/about'    about_url => 'http://localhost:3000/about'
+  match '/contact', to: 'static_pages#contact'  #contact_path => '/contact'  about_url => 'http://localhost:3000/contact'
+  
+  #get "static_pages/home"  
+  #get "static_pages/help"
+  #get "static_pages/about"
+  #get "static_pages/contact"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -52,9 +68,6 @@ SampleApp::Application.routes.draw do
   #     resources :products
   #   end
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
