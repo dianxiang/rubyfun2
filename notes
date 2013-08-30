@@ -41,3 +41,21 @@ With RAILS:
 	Rails looks in the StaticPage controller (initially empty) and then executes the code in the home action. Then it renders the view corresponding to the action
 	<!-- <%... %> executes the code but <$= .. %> executes the code AND puts results back into view -->
  
+? at the end of methods indicate that it returns a bool
+
+array = [1, 2, 5, 6, 3]
+array[-1]  #returns 3
+all objects return true
+nil is object
+module = library 
+array.sort! #modifles the actual content of the data structure
+array.push("poo"); #[1, 2, 5, 6, 3, poo]
+(0..9).to_a #use parantheses to call to_a on the range
+a = %w[foo bar baz quux]         # Use %w to make a string array.
+=> ["foo", "bar", "baz", "quux"]
+ranges also work with letters ('a'..'h')
+
+symbols are strings but are immutable
+everything in Ruby is an object
+
+
